@@ -4,7 +4,7 @@ import RepasCard from "./RepasCard";
 const RepasList = ({ repasList }) => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>REPAS AUX SAVEUR D'ICI ET D'ASIE</h1>
+      <h1 className={styles.title}>REPAS AUX SAVEUR DICI ET DASIE</h1>
       <p className={styles.desc}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
         architecto voluptate quod molestias quisquam placeat eum corporis odio

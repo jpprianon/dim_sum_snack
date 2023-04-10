@@ -37,9 +37,9 @@ const Logger = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button onClick={handleClick} className={styles.button}>
-          S'identifier
+          Sidentifier
         </button>
-        {error && <span className={styles.error}>Fausses informations d'identification!</span>}
+        {error && <span className={styles.error}>Fausses informations didentification!</span>}
       </div>
     </div>
   );
