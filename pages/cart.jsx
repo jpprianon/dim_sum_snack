@@ -25,7 +25,7 @@ const Cart = () => {
   const createOrder = async (data) => {
     try {
       const res = await axios.post(
-        "https://dim-sum-snack-versel/api/orders",
+        "https://dim-sum-snack.vercel.app/api/orders",
         data
       );
       if (res.status === 201) {

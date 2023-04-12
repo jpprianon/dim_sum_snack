@@ -37,7 +37,7 @@ export const getServerSideProps = async (ctx) => {
     admin = true;
   }
 
-  const res = await axios.get("https://dim-sum-snack-versel/api/products");
+  const res = await axios.get("https://dim-sum-snack.vercel.app/api/products");
   return {
     props: {
       repasList: res.data,

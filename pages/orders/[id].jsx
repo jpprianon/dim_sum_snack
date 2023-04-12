@@ -117,7 +117,7 @@ const Order = ({ order }) => {
 
 export const getServerSideProps = async ({ params }) => {
   const res = await axios.get(
-    `https://dim-sum-snack-versel/api/orders/${params.id}`
+    `https://dim-sum-snack.vercel.app/api/orders/${params.id}`
   );
   return {
     props: { order: res.data },

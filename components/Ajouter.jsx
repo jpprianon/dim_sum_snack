@@ -44,7 +44,10 @@ const Ajouter = ({ setClose }) => {
         img: url,
       };
 
-      await axios.post("https://dim-sum-snack-versel/api/products", newProduct);
+      await axios.post(
+        "https://dim-sum-snack.vercel.app/api/products",
+        newProduct
+      );
       setClose(true);
     } catch (err) {
       console.log(err);
