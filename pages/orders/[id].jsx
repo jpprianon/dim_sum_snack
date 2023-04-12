@@ -96,13 +96,15 @@ const Order = ({ order }) => {
         <div className={styles.wrapper}>
           <h2 className={styles.title}>CART TOTAL</h2>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Subtotal:</b>{order.total}€
+            <b className={styles.totalTextTitle}>Subtotal:</b>
+            {order.total}€
           </div>
           <div className={styles.totalText}>
             <b className={styles.totalTextTitle}>Discount:</b>0.00€
           </div>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Total:</b>{order.total}€
+            <b className={styles.totalTextTitle}>Total:</b>
+            {order.total}€
           </div>
           <button disabled className={styles.button}>
             PAYER
@@ -114,7 +116,9 @@ const Order = ({ order }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-  const res = await axios.get(`http://localhost:3000/api/orders/${params.id}`);
+  const res = await axios.get(
+    `https://dim-sum-snack-versel/api/orders/${params.id}`
+  );
   return {
     props: { order: res.data },
   };

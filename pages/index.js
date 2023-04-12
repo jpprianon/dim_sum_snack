@@ -37,7 +37,7 @@ export const getServerSideProps = async (ctx) => {
     admin = true;
   }
 
-  const res = await axios.get("http://localhost:3000/api/products");
+  const res = await axios.get("https://dim-sum-snack-versel/api/products");
   return {
     props: {
       repasList: res.data,

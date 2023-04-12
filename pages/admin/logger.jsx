@@ -11,7 +11,7 @@ const Logger = () => {
 
   const handleClick = async () => {
     try {
-      await axios.post("http://localhost:3000/api/logger", {
+      await axios.post("https://dim-sum-snack-versel/api/logger", {
         username,
         password,
       });
