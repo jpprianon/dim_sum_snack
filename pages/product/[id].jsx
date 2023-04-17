@@ -97,7 +97,7 @@ const Product = ({ repas }) => {
 
 export const getServerSideProps = async ({ params }) => {
   const res = await axios.get(
-    `https://dim-sum-snack.vercel.app/api/products/${params.id}`
+    `https://dimsumsnack.netlify.app/api/products/${params.id}`
   );
   return {
     props: {

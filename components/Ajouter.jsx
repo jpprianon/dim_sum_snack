@@ -45,7 +45,7 @@ const Ajouter = ({ setClose }) => {
       };
 
       await axios.post(
-        "https://dim-sum-snack.vercel.app/api/products",
+        "https://dimsumsnack.netlify.app/api/products",
         newProduct
       );
       setClose(true);

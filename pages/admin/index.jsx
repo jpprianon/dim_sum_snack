@@ -12,7 +12,7 @@ const Index = ({ orders, products }) => {
     console.log(id);
     try {
       const res = await axios.delete(
-        "https://dim-sum-snack.vercel.app/api/products/" + id
+        "https://dimsumsnack.netlify.app/api/products/" + id
       );
       setRepasList(repasList.filter((repas) => repas._id !== id));
     } catch (err) {
@@ -26,7 +26,7 @@ const Index = ({ orders, products }) => {
 
     try {
       const res = await axios.put(
-        "https://dim-sum-snack.vercel.app/api/orders/" + id,
+        "https://dimsumsnack.netlify.app/api/orders/" + id,
         {
           status: currentStatus + 1,
         }
@@ -133,10 +133,10 @@ export const getServerSideProps = async (ctx) => {
   }
 
   const productRes = await axios.get(
-    "https://dim-sum-snack.vercel.app/api/products"
+    "https://dimsumsnack.netlify.app/api/products"
   );
   const orderRes = await axios.get(
-    "https://dim-sum-snack.vercel.app/api/orders"
+    "https://dimsumsnack.netlify.app/api/orders"
   );
 
   return {

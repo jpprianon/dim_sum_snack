@@ -12,7 +12,7 @@ const OrderDetail = ({ total, createOrder }) => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <h1 className={styles.title}>Vous devez payer 3€ pour la livraison.</h1>
+        <h1 className={styles.title}>Vous pouvez recuperer votre commande à partir de 11H15.</h1>
         <div className={styles.item}>
           <label className={styles.label}>Nom Prenom</label>
           <input

