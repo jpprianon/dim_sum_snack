@@ -37,7 +37,7 @@ export const getServerSideProps = async (ctx) => {
     admin = true;
   }
 
-  const res = await axios.get("https://dimsumsnack.netlify.app/api/products");
+  const res = await axios.get("http://dimsumsnack.netlify.app/api/products");
   return {
     props: {
       repasList: res.data,

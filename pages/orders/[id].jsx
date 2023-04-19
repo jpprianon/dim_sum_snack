@@ -117,7 +117,7 @@ const Order = ({ order }) => {
 
 export const getServerSideProps = async ({ params }) => {
   const res = await axios.get(
-    `https://dimsumsnack.netlify.app/api/orders/${params.id}`
+    `http://dimsumsnack.netlify.app/api/orders/${params.id}`
   );
   return {
     props: { order: res.data },

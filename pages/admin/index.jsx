@@ -133,11 +133,9 @@ export const getServerSideProps = async (ctx) => {
   }
 
   const productRes = await axios.get(
-    "https://dimsumsnack.netlify.app/api/products"
+    "http://dimsumsnack.netlify.app/api/products"
   );
-  const orderRes = await axios.get(
-    "https://dimsumsnack.netlify.app/api/orders"
-  );
+  const orderRes = await axios.get("http://dimsumsnack.netlify.app/api/orders");
 
   return {
     props: {
