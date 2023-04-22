@@ -7,7 +7,7 @@ const handler = async (req, res) => {
     query: { id },
   } = req;
 
-  await dbConnect();
+  dbConnect();
 
   if (method === "GET") {
     try {
@@ -30,5 +30,6 @@ const handler = async (req, res) => {
   if (method === "DELETE") {
   }
 };
+
 
 export default handler;

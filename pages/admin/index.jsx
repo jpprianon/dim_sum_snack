@@ -12,7 +12,7 @@ const Index = ({ orders, products }) => {
     console.log(id);
     try {
       const res = await axios.delete(
-        "https://dimsumsnack.netlify.app/api/products/" + id
+        "http://localhost:3000/api/products/" + id
       );
       setRepasList(repasList.filter((repas) => repas._id !== id));
     } catch (err) {
@@ -25,12 +25,9 @@ const Index = ({ orders, products }) => {
     const currentStatus = item.status;
 
     try {
-      const res = await axios.put(
-        "https://dimsumsnack.netlify.app/api/orders/" + id,
-        {
-          status: currentStatus + 1,
-        }
-      );
+      const res = await axios.put("http://localhost:3000/api/orders/" + id, {
+        status: currentStatus + 1,
+      });
       setOrderList([
         res.data,
         ...orderList.filter((order) => order._id !== id),
@@ -103,7 +100,11 @@ const Index = ({ orders, products }) => {
                 <td>{order.customer}</td>
                 <td>{order.total}€</td>
                 <td>
-                  {order.method === 0 ? <span>espèce</span> : <span>payez</span>}
+                  {order.method === 0 ? (
+                    <span>espèce</span>
+                  ) : (
+                    <span>payez</span>
+                  )}
                 </td>
                 <td>{status[order.status]}</td>
                 <td>
@@ -133,9 +134,11 @@ export const getServerSideProps = async (ctx) => {
   }
 
   const productRes = await axios.get(
-    "http://dimsumsnack.netlify.app/api/products"
+    "https://dimsumsnack.netlify.app/api/products"
   );
-  const orderRes = await axios.get("http://dimsumsnack.netlify.app/api/orders");
+  const orderRes = await axios.get(
+    "https://dimsumsnack.netlify.app/api/orders"
+  );
 
   return {
     props: {
