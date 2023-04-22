@@ -44,10 +44,7 @@ const Ajouter = ({ setClose }) => {
         img: url,
       };
 
-      await axios.post(
-        "https://dimsumsnack.netlify.app/api/products",
-        newProduct
-      );
+      await axios.post("http://localhost:3000/api/products", newProduct);
       setClose(true);
     } catch (err) {
       console.log(err);
